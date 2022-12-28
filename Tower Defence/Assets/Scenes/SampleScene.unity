@@ -4091,6 +4091,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4398928536028029233, guid: 2b860d71c6503bd4aa996b855b751438, type: 3}
   m_PrefabInstance: {fileID: 602715172}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &622053675 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 548872842504398720, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
+  m_PrefabInstance: {fileID: 7089040057628190670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &630665310
 GameObject:
   m_ObjectHideFlags: 0
@@ -8100,11 +8105,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c9ffab44440557439406adbe98055db, type: 3}
---- !u!4 &1271303255 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2852161233029787556, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-  m_PrefabInstance: {fileID: 7089040057628190670}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1271494942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14709,27 +14709,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf8f633c0c6830848ab90b3f2e88e340, type: 3}
---- !u!1 &769225159226060445 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7551835548097644883, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-  m_PrefabInstance: {fileID: 7089040057628190670}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &769225159226060446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769225159226060445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 608b608226b30fd4782fbcc8d33ef8a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 15
-  enemyTag: Enemy
-  pivot: {fileID: 1271303255}
-  turnSpeed: 10
 --- !u!4 &833428757704982093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4007644211904787679, guid: c0850e1a1d29c18488dbab04b6a78e3d, type: 3}
@@ -15360,10 +15339,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2852161233029787556, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 769225159226060446, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 622053675}
     - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
       propertyPath: m_RootOrder
       value: 1
