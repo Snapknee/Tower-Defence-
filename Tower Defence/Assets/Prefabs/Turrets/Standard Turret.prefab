@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 7551835548099647379}
   - component: {fileID: 769225159226060446}
   m_Layer: 0
-  m_Name: SM_Prop_Turret_Base_Single_01
+  m_Name: Standard Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   pivot: {fileID: 2852161233029787556}
   turnSpeed: 10
   bulletPrefab: {fileID: 5877952702188294691, guid: e3a7a2aea1955ac49b1bc96280fed6c8, type: 3}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 548872842504398720}
 --- !u!1 &7551835548097644887
 GameObject:
   m_ObjectHideFlags: 0
