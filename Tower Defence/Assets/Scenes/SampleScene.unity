@@ -5329,6 +5329,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81660622595bac489fe7f740df44e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 7551835548097644883, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
+    cost: 100
+  RocketTurret:
+    prefab: {fileID: 8803416951036579756, guid: a9c53686c1922184c9e6b693f3d2440c, type: 3}
+    cost: 250
 --- !u!1001 &728711854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6697,7 +6703,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 56.891, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -7406,7 +7412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230356776046076, guid: 8fbbb487f67fdc34ab62d2f698ab9c3e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4230356776046076, guid: 8fbbb487f67fdc34ab62d2f698ab9c3e, type: 3}
       propertyPath: m_LocalScale.x
