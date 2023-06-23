@@ -7440,7 +7440,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $100
+  m_Text: $230
 --- !u!222 &1027739788
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12750,6 +12750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurretPrefab: {fileID: 7551835548097644883, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
   rocketTurretPrefab: {fileID: 8803416951036579756, guid: a9c53686c1922184c9e6b693f3d2440c, type: 3}
+  buildEffect: {fileID: 1879769179923522, guid: 7c39dd403447d6243a14c46dc5b508b0, type: 3}
 --- !u!114 &1779762078
 MonoBehaviour:
   m_ObjectHideFlags: 0
