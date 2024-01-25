@@ -31,12 +31,19 @@ public class Enemy : MonoBehaviour
     {
         if (wavepointIndex >= Waypoints.points.Length -1)
         {
-            Destroy(gameObject);
+            EndPath();
             return;
         }
+
 
         //This will gather the next waypoint plus an additional 1 and will then assign the next waypoint as current waypoint
         wavepointIndex++;
         target = Waypoints.points[wavepointIndex];
+    }
+
+    void EndPath()
+    {
+        PlayerStats.Lives--;
+        Destroy(gameObject);
     }
 }
