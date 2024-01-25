@@ -110,7 +110,7 @@ public class Turret : MonoBehaviour
 
     void Laser()
     {
-        //target.GetComponent<Enemy>().TakeDamage(damageOverTime * Time.deltaTime);
+        target.GetComponent<Enemy>().TakeDamage(damageOverTime * Time.deltaTime);
 
         if (!lineRenderer.enabled)
         {
