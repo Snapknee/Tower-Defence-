@@ -795,63 +795,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4398928536028029233, guid: 2b860d71c6503bd4aa996b855b751438, type: 3}
   m_PrefabInstance: {fileID: 83133390}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &83816001
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097222003, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551835548097644883, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
-      propertyPath: m_Name
-      value: Standard Turret
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
 --- !u!1001 &90683248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4249,7 +4192,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 382011989}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1402078518}
+        m_TargetAssemblyTypeName: NodeUI, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &382011989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6052,7 +6007,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &632301553
 PrefabInstance:
@@ -7069,12 +7024,18 @@ MonoBehaviour:
   standardTurret:
     prefab: {fileID: 7551835548097644883, guid: 7e538241c302ad344a8cd5bf3ef71bc4, type: 3}
     cost: 100
+    upgradedPrefab: {fileID: 1054409225073040, guid: 121432c6b8493534cb89dae567754a46, type: 3}
+    upgradeCost: 60
   RocketTurret:
     prefab: {fileID: 8803416951036579756, guid: a9c53686c1922184c9e6b693f3d2440c, type: 3}
     cost: 250
+    upgradedPrefab: {fileID: 0}
+    upgradeCost: 0
   LaserTurret:
     prefab: {fileID: 5146689316444850262, guid: aa10fa18de2033546ab34ebb2a4fac1d, type: 3}
     cost: 350
+    upgradedPrefab: {fileID: 0}
+    upgradeCost: 0
 --- !u!1001 &728711854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9147,7 +9108,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 56.891, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -12743,7 +12704,7 @@ Transform:
   m_Children:
   - {fileID: 1615837618}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1402078518
 MonoBehaviour:
@@ -17444,7 +17405,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2838967812581714303, guid: 81695c08b5b52eb45b2bf40758732cac, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2838967812581714303, guid: 81695c08b5b52eb45b2bf40758732cac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21203,7 +21164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5150693695385729094, guid: aa10fa18de2033546ab34ebb2a4fac1d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5150693695385729094, guid: aa10fa18de2033546ab34ebb2a4fac1d, type: 3}
       propertyPath: m_LocalPosition.x

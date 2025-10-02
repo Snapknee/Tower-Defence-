@@ -9,8 +9,13 @@ public class Node : MonoBehaviour
     public Color notEnoughMoneyColor;
     public Vector3 positionOffset;
 
-    [Header("Optional")]
+    //[Header("Optional")]
+    [HideInInspector]
     public GameObject turret;
+    [HideInInspector]
+    public TurretBlueprint turretBlueprint;
+    [HideInInspector]
+    public bool isUpgraded = false;
 
     private Renderer rend;
     private Color startColor;
@@ -46,12 +51,58 @@ public class Node : MonoBehaviour
             return;
 
         //Build a turret
-        buildManager.BuildTurretOn(this);
+        BuildTurret(buildManager.GetTurretToBuild());
 
         /*
         GameObject turretToBuild = buildManager.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
         */
+    }
+
+    void BuildTurret (TurretBlueprint blueprint)
+    {
+        if (PlayerStats.Money < blueprint.cost)
+        {
+            Debug.Log("Not Enough Money to Build");
+            return;
+        }
+
+        PlayerStats.Money -= blueprint.cost;
+
+        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+
+        turretBlueprint = blueprint;
+
+        GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
+
+        Debug.Log("Turret Build!");
+    }
+
+    public void UpgradeTurret ()
+    {
+        if (PlayerStats.Money < turretBlueprint.upgradeCost)
+        {
+            Debug.Log("Not Enough Money to upgrade that");
+            return;
+        }
+
+        PlayerStats.Money -= turretBlueprint.upgradeCost;
+
+        //Get rid of old turret
+        Destroy(turret);
+
+        //Building upgraded turret
+        GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+
+        GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
+
+        isUpgraded = true;
+
+        Debug.Log("Turret Upgraded!");
     }
 
     void OnMouseEnter()
