@@ -10,6 +10,8 @@ public class EnemyMovement : MonoBehaviour
 
     private Enemy enemy;
 
+    public float rotationSpeed = 5f;
+
     private void Start()
     {
         enemy = GetComponent<Enemy>();
@@ -23,6 +25,9 @@ public class EnemyMovement : MonoBehaviour
         //Target move towards waypoint
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
+        //Remove if enemy rotation doesn't work
+        RotateTowardsWaypoint();
+        //Remove end here
 
         //Target reaches waypoint distance and will then gets the position of next waypoint
         if (Vector3.Distance(transform.position, target.position) <= 0.02f)
@@ -46,7 +51,15 @@ public class EnemyMovement : MonoBehaviour
         wavepointIndex++;
         target = Waypoints.points[wavepointIndex];
     }
+    //Remove if doesnt work for enemy roation
+    private void RotateTowardsWaypoint()
+    {
+        Vector3 direction = target.position - transform.position;
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed);
+    }
 
+    // Ends here for removal 
     void EndPath()
     {
         PlayerStats.Lives--;
